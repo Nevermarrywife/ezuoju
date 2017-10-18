@@ -1,0 +1,77 @@
+<!DOCTYPE>
+<html>
+<head lang="en">
+<meta charset="utf-8">
+<style>
+	body{
+		padding-top: 100px;
+		background: #22b573
+	}
+	a{
+		text-decoration: none;
+		color:#e01334;
+		font-size: 80px;
+		font-family:'Verdana', serif;
+	}
+	.btndiv{
+		float: left;
+		margin-top: 100px;
+		width: 100%;
+		text-align: center;
+		margin:2px auto;
+		z-index: 10
+	}
+	.imgone{
+		width: 600px;
+		height: 650px;
+		margin:auto;
+		border-radius: 5px;
+	}
+	.imgtwo{
+		margin:auto;
+		width: 120px;
+		height: 140px;
+	}
+	.txt{
+		color: #e01334;
+		text-align: center;
+		font-size: 50px;
+		font-weight: bold;
+		font-family:'Verdana', serif; 
+	}
+	.hide{
+		display: none;
+	}
+	.content{
+		margin:50px auto;
+		width: 600px;
+		height: 750px;
+	}
+	span,img{
+		display: block;
+	}
+</style>
+
+</head>
+<body>
+<div class="btndiv">
+<a href="#">快点我！！！！！</a>
+</div> 
+
+
+<div class="content">
+<img class="imgone hide" src="3.jpg" alt="">
+<img class="imgtwo hide" src="2.png" alt="">
+<span class="txt hide">
+	阿金，一个快乐的小老头。
+</span>
+</div>
+
+<script src="jquery-3.2.1.js"></script>
+<script>
+$('.btndiv a').click(function(){
+	$(this).parent().addClass('hide').siblings().children().removeClass('hide')
+})
+</script>
+</body>
+</html>
