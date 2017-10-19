@@ -2,86 +2,42 @@
 <html>
 <head lang="en">
 <meta charset="utf-8">
+<link rel="stylesheet" href="css/bootstrap.css">
 <style>
-	body{
-		padding-top: 100px;
-		background: #22b573
-	}
-	a{
-		text-decoration: none;
-		color:#e01334;
-		font-size: 80px;
-		font-family:'Verdana', serif;
-	}
-	.btndiv{
-		float: left;
-		margin-top: 100px;
-		width: 100%;
-		text-align: center;
-		margin:2px auto;
-		z-index: 10
-	}
-	.imgone{
-		width: 600px;
-		height: 650px;
-		margin:auto;
-		border-radius: 5px;
-		-webkit-transition:1s all;
-		-moz-transition:1s all;
-		-o-transition:1s all;
-		transition:1s all;
-	}
-	.imgone:hover{
-		-webkit-transform: rotate(360deg);
-		-moz-transition: rotate(360deg);
-		-o-transition: rotate(360deg);
-		transform: rotate(360deg);
-	}
-	.imgtwo{
-		margin:auto;
-		width: 120px;
-		height: 140px;
-	}
-	.txt{
-		color: #e01334;
-		text-align: center;
-		font-size: 50px;
-		font-weight: bold;
-		font-family:'Verdana', serif; 
-	}
-	.hide{
-		display: none;
-	}
-	.content{
-		margin:50px auto;
-		width: 600px;
-		height: 750px;
-	}
-	span,img{
-		display: block;
-	}
+.imgone{
+	width: 500px;
+	height: 600px;	
+}
+.imgtwo{
+	width: 100px;
+	height: 150px;
+}
+.title{
+	margin:100px auto;
+
+}
 </style>
 
 </head>
 <body>
-<div class="btndiv">
-<a href="#">快点我！！！！！</a>
-</div> 
 
-
-<div class="content">
-<img class="imgone hide" src="3.jpg" alt="">
-<img class="imgtwo hide" src="2.png" alt="">
-<span class="txt hide">
-	阿金，一个快乐的小老头。
-</span>
+<div class="container-fluid">
+	<h1><strong><p class="text-center title">点我！！！！</p></strong></h1>
+	<img  src="3.jpg" class="img-responsive center-block imgone hide" alt="">
+	<img src="2.png" class="img-responsive center-block imgtwo hide" alt="">
+	<h1 class="hide"><strong><p class="text-center">快乐的小老头</p></strong></h1>
 </div>
 
+
 <script src="jquery-3.2.1.js"></script>
+<script src="js/bootstrap.js"></script>
 <script>
-$('.btndiv a').click(function(){
-	$(this).parent().addClass('hide').siblings().children().removeClass('hide')
+$('.title').click(function(){
+	$(this).addClass('hide').parent().parent().siblings().removeClass('hide')
 })
+// $('.imgone').click(function(){
+
+// })
 </script>
 </body>
 </html>
